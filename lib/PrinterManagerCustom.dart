@@ -54,7 +54,7 @@ class PrinterManagerCustom {
     if(Platform.isIOS){
     var listOfDevicesConnected = await flutterBlue.connectedDevices;
     var deviceConnected = listOfDevicesConnected.firstWhere((element) => element.name == printerDevice?.name);
-    if(deviceConnected.name.isNotEmpty){
+    if(deviceConnected !=null){
       return true;
     }else{
       return false;
