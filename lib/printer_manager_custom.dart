@@ -11,7 +11,6 @@ class PrinterManagerCustom {
   FlutterBlue flutterBlue = FlutterBlue.instance;
   BluetoothPrinter? printerDevice;
 
-
   BluetoothPrinterManager? manager;
 
   Future<List<BluetoothPrinter>> starScanDevices() async {
@@ -24,7 +23,7 @@ class PrinterManagerCustom {
       {required BluetoothPrinter printer,
       PaperSize paperSize = PaperSize.mm80,
       Duration duration = const Duration(seconds: 5)}) async {
-    if(printerDevice == null) printerDevice = printer;
+    if (printerDevice == null) printerDevice = printer;
     CapabilityProfile profile = await CapabilityProfile.load();
     manager = BluetoothPrinterManager(printerDevice!, paperSize, profile);
     ConnectionResponse res = await manager!.connect();
@@ -46,30 +45,31 @@ class PrinterManagerCustom {
   }
 
   Future<bool> bluetoothState() async {
-   bool state = await flutterBlue.isOn;
+    bool state = await flutterBlue.isOn;
     return state;
   }
 
   Future<bool> isConnected() async {
-    if(Platform.isIOS){
-    var listOfDevicesConnected = await flutterBlue.connectedDevices;
-    var deviceConnected = listOfDevicesConnected.firstWhere((element) => element.name == printerDevice?.name);
-    if(deviceConnected !=null){
-      return true;
-    }else{
-      return false;
+    if (Platform.isIOS) {
+      var listOfDevicesConnected = await flutterBlue.connectedDevices;
+      var deviceConnected = listOfDevicesConnected
+          .firstWhere((element) => element.name == printerDevice?.name);
+      if (deviceConnected.name.isEmpty) {
+        return false;
+      } else {
+        return true;
+      }
     }
-}if(Platform.isAndroid){
+    if (Platform.isAndroid) {
       bool? state = await bluetooth.isConnected;
       return state ?? false;
     }
     return false;
-
   }
 
   Future startPrinter({required String ticket}) async {
     Uint8List bytes = await WebcontentConverter.contentToImage(content: ticket);
-    ESCPrinterService service = ESCPrinterService(bytes);
+    ESCPrinterService service = ESCPrinterService(ticket: bytes);
     List<int> data = await service.getBytes();
     if (manager != null) {
       print("isConnected ${manager!.isConnected}");
@@ -80,8 +80,4 @@ class PrinterManagerCustom {
   Future disconnectDevice() async {
     await manager?.disconnect();
   }
-
-
-
-
 }

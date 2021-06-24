@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pos_printer_manager/pos_printer_manager.dart';
-import 'package:test_printer_final/PrinterManagerCustom.dart';
+import 'package:test_printer_final/printer_manager_custom.dart';
 import 'package:test_printer_final/resume_ticket.dart';
 
 class HomePage extends StatefulWidget {
