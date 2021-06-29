@@ -4,11 +4,11 @@ import 'package:blue_thermal_printer/blue_thermal_printer.dart';
 import 'package:pos_printer_manager/pos_printer_manager.dart';
 import 'package:test_printer_final/ticket_service.dart';
 import 'package:webcontent_converter/webcontent_converter.dart';
-import 'package:flutter_blue/flutter_blue.dart';
+import 'package:flutter_blue/flutter_blue.dart' as fBlue;
 
 class PrinterManagerCustom {
   BlueThermalPrinter bluetooth = BlueThermalPrinter.instance;
-  FlutterBlue flutterBlue = FlutterBlue.instance;
+  fBlue.FlutterBlue flutterBlue = fBlue.FlutterBlue.instance;
   BluetoothPrinter? printerDevice;
 
   BluetoothPrinterManager? manager;
@@ -51,13 +51,16 @@ class PrinterManagerCustom {
 
   Future<bool> isConnected() async {
     if (Platform.isIOS) {
-      var listOfDevicesConnected = await flutterBlue.connectedDevices;
-      var deviceConnected = listOfDevicesConnected
-          .firstWhere((element) => element.name == printerDevice?.name);
-      if (deviceConnected.name.isEmpty) {
-        return false;
-      } else {
-        return true;
+      List<fBlue.BluetoothDevice> listOfDevicesConnected =
+          await flutterBlue.connectedDevices;
+      if (listOfDevicesConnected.length > 0 && printerDevice != null ){
+        List<fBlue.BluetoothDevice> isConnectedDevice = listOfDevicesConnected
+            .where((element) => element.name == printerDevice!.name).toList();
+        if (isConnectedDevice.isEmpty) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
     if (Platform.isAndroid) {
