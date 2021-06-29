@@ -50,21 +50,14 @@ class _HomePageState extends State<HomePage> {
                   messageConnection =
                       await manager.connectDevice(printer: _printers[index]);
 
-                            if(messageConnection != 'Success'){
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                    content: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Text('Ocorreu um erro de conexão'),
-                                        Text('Clique em ok e tente novamente'),
-                                      ],
-                                    ),
-                                    duration: const Duration(seconds: 3),
-                                ),
-                              );
-                            }
-
+                  if (messageConnection != 'Success') {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Ocorreu um erro de conexão'),
+                        duration: const Duration(seconds: 3),
+                      ),
+                    );
+                  }
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -101,7 +94,6 @@ class _HomePageState extends State<HomePage> {
             },
             child: Icon(Icons.print),
           ),
-
           const SizedBox(
             width: 100,
           ),

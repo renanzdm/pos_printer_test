@@ -63,7 +63,7 @@ packages:
       name: convert
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   crypto:
     dependency: transitive
     description:
@@ -240,7 +240,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "307149fae24a252c99512f588afd17a422603723"
+      resolved-ref: "6e6422b2e0505eb189a9ba3728e7433e4237ed9e"
       url: "https://github.com/renanzdm/pos_printer_manager_forked"
     source: git
     version: "0.0.3+3"
