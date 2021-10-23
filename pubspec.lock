@@ -7,21 +7,21 @@ packages:
       name: archive
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.2"
+    version: "3.1.6"
   async:
     dependency: transitive
     description:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.6.1"
+    version: "2.8.1"
   blue_thermal_printer:
     dependency: transitive
     description:
       name: blue_thermal_printer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.3"
+    version: "1.1.8"
   boolean_selector:
     dependency: transitive
     description:
@@ -42,7 +42,7 @@ packages:
       name: charcode
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.3.1"
   clock:
     dependency: transitive
     description:
@@ -77,7 +77,7 @@ packages:
       name: csslib
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.0"
+    version: "0.17.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -91,7 +91,7 @@ packages:
       name: dio
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.0"
+    version: "4.0.1"
   easy_logger:
     dependency: transitive
     description:
@@ -105,7 +105,7 @@ packages:
       name: esc_pos_utils_plus
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.1+3"
+    version: "2.0.1+5"
   fake_async:
     dependency: transitive
     description:
@@ -157,7 +157,7 @@ packages:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.13.3"
+    version: "0.13.4"
   http_parser:
     dependency: transitive
     description:
@@ -171,14 +171,14 @@ packages:
       name: image
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.2"
+    version: "3.0.8"
   logging:
     dependency: transitive
     description:
       name: logging
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.2"
   matcher:
     dependency: transitive
     description:
@@ -192,7 +192,7 @@ packages:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.3.0"
+    version: "1.7.0"
   path:
     dependency: transitive
     description:
@@ -200,20 +200,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.1"
   petitparser:
     dependency: transitive
     description:
       name: petitparser
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.1.0"
+    version: "4.4.0"
   ping_discover_network_forked:
     dependency: transitive
     description:
@@ -227,7 +220,7 @@ packages:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.2"
   pool:
     dependency: transitive
     description:
@@ -240,7 +233,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "6e6422b2e0505eb189a9ba3728e7433e4237ed9e"
+      resolved-ref: "204e2d32af891ca2a086227b032687f1124cb6e7"
       url: "https://github.com/renanzdm/pos_printer_manager_forked"
     source: git
     version: "0.0.3+3"
@@ -257,7 +250,7 @@ packages:
       name: puppeteer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.3.0"
   rxdart:
     dependency: transitive
     description:
@@ -311,7 +304,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.2"
   typed_data:
     dependency: transitive
     description:
@@ -355,7 +348,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.1.2"
+    version: "5.3.1"
 sdks:
-  dart: ">=2.12.0 <3.0.0"
+  dart: ">=2.14.0 <3.0.0"
   flutter: ">=1.20.0"

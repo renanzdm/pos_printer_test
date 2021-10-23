@@ -1,5 +1,4 @@
-class ResumeTicket{
-
+class ResumeTicket {
   static String resumeTicket({Object? obj}) {
     return """
 <!DOCTYPE html>
@@ -145,8 +144,58 @@ class ResumeTicket{
             <hr class="line">
             <!-- end header part -->
             <!-- product part -->
-            ${getResumeTable(title: 'testando',titleLine: 'line teste',value: '12,00')}
-          
+            
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            ${getResumeTable(title: 'testando', titleLine: 'line teste', value: '12,00')}
+            
            
            
             <!--end produto -->
@@ -165,7 +214,11 @@ class ResumeTicket{
 </html>
 """;
   }
-  static String getResumeTable({required String title,required String titleLine,required String? value}) {
+
+  static String getResumeTable(
+      {required String title,
+      required String titleLine,
+      required String? value}) {
     return """<div class="product">
                 <p class="boldTextTitle">$title</p>
                     <p class="full-width inline-block">
